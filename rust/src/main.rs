@@ -19,7 +19,6 @@ fn main() {
   example_function(42);
  let ret:i32 = return_function(); 
     println!("Returned value: {}", ret);
- 
 }
 
    
