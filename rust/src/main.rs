@@ -1,12 +1,12 @@
 
 
-use std::io;//for inputs and outputs
+use std::{i32, io};//for inputs and outputs
 
 
 fn main() {
 //---------------int----------------------------------------
     let mut x: i32 = -200;   //if use u32 then it will throw error bevusde of sign
-//same variable initialisation
+//same variable initialisation shadow method
     let _var:i32 = 345;
     println!("1st scope var={_var}");
     let _var:i32 = _var+2;
@@ -68,6 +68,14 @@ println!("guess={_guess}");
   example_function(42);
  let  ret:i32 = return_function(); 
     println!("Returned value: {}", ret);
+
+    let tup: (i32,f64,u8) =(234,4.666,7);
+    let(_x,_y,_z) = tup;
+    println!("tuple first value={_x}");
+    println!("  tuple second value={_y}");
+    println!("tuple third value={_z}");
+
+    println!("tuple firsr value={0}",tup.0);
 }
 
    

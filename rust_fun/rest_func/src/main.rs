@@ -3,6 +3,32 @@ fn main() {
     let _val:i32 = 223;
     another_function();
     another_function_parameter(5);
+//---------condition---------------------------------
+   /*  if _val  //not possible since defaul use boolean
+    {
+println!("true");
+    }
+    else
+    {
+        println!("false");
+    } */
+
+    if _val<300
+    {
+        println!("true");
+    }
+
+    if _val%2==0
+    {
+        println!("even");
+    }
+
+    let _numb:i8 = if _val>0 {10} else {20};  //initislisation based on condition can be used with string 
+    println!("The value of _numb is: {}", _numb);
+
+let _strin: &str  = if _val>0 {"true sys"} else {"false sys"};  
+println!("The value of _strin is: {}", _strin);
+    //-----------------------------------------------------------------------
 
 
    
@@ -10,7 +36,7 @@ fn main() {
     print!("calling function inside {}",call_func()); //return type printing inside call by value
     println!("The value of new_ret is: {}",_new_ret); 
     let ret:bool = even_func(4);
-    if ret{
+    if ret{                 //default condition is bool based different from 
         println!("even");
     }
     else {
@@ -38,7 +64,7 @@ fn call_func()->i32{
     22
 }
 
-fn even_func(x:i32)->bool{
+pub fn even_func(x:i32)->bool{
     let x = x&1;
     if x==1{
         return false;
