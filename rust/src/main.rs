@@ -1,23 +1,60 @@
 
 
-
+use std::io;//for inputs and outputs
 
 
 fn main() {
-    println!("Hello, world!");
-    //write functions here
-    // This is a placeholder for the main function.
-    //write your code here
-    // You can implement the logic for your application here.
-    // For example, you might want to call other functions or modules.
-    // This is a simple example of how you might structure your main function.
-    // You can also include any necessary imports or module calls here.
-    //how to write functions in Rust
-    // You can define functions above or below the main function.
-    // Functions can be defined using the `fn` keyword, followed by the function name and
-    // parameters in parentheses. The function body is enclosed in curly braces.
+//---------------int----------------------------------------
+    let mut x: i32 = -200;   //if use u32 then it will throw error bevusde of sign
+    println!("{}",x);   //{} is variable
+    println!("x={}",x);   //{} is variable C
+    println!("{x}");  //another way to print
+    println!("x={x}"); //another way to print C++
+    println!("Hello, world!");  //its macro not library
+    x=30;
+    println!("after mute x={x}");
+let  y: i32 = 500;
+let  z : i32 = x+y; //you 
+
+println!("z={z}");
+//-----------------------boolean----------------
+
+let _is_a:bool =true;
+let _is_b:bool=false;
+
+if _is_a
+{
+    println!("true its a");
+}
+else {
+    println!("flase not a");
+}
+//----------------string--------------------
+
+let mut str  : &'static str = "hello bosch"; //not good C++ implicit 
+println!("{str}");
+
+str ="not bosch here";
+
+println!("{str}");
+
+
+let mut _nw_i  = String ::from("new"); //explicit 
+println!("{_nw_i}");
+_nw_i.push_str("Less new"); //for string just push for &str cocantinate string
+_nw_i.push_str(str); //concatinate strinh
+//str.push("only in case of &"); //dont use &str because it wont work
+
+println!("{str}");
+
+println!("{_nw_i}");
+
+let mut _guess:String = String::new();
+io::stdin().read_line(&mut _guess).expect("error");   //like scanf 
+println!("guess={_guess}");
+
   example_function(42);
- let ret:i32 = return_function(); 
+ let  ret:i32 = return_function(); 
     println!("Returned value: {}", ret);
 }
 
