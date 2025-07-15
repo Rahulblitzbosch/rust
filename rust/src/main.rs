@@ -6,6 +6,18 @@ use std::io;//for inputs and outputs
 fn main() {
 //---------------int----------------------------------------
     let mut x: i32 = -200;   //if use u32 then it will throw error bevusde of sign
+//same variable initialisation
+    let _var:i32 = 345;
+    println!("1st scope var={_var}");
+    let _var:i32 = _var+2;
+    println!("shadow 1st outer scope var={_var}");
+    let _var = _var+3;
+    println!("shadow 2nd outer scope var={_var}");
+{
+    let _var:i32 =_var+2;  //we can use shaadow variable with same name
+    println!("shadow 2nd inner scope var={_var}");
+}
+println!("after 3rd scope outer  var={_var}");
     println!("{}",x);   //{} is variable
     println!("x={}",x);   //{} is variable C
     println!("{x}");  //another way to print
