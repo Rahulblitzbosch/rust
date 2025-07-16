@@ -26,8 +26,9 @@ println!("true");
     let _numb:i8 = if _val>0 {10} else {20};  //initislisation based on condition can be used with string 
     println!("The value of _numb is: {}", _numb);
 
-let _strin: &str  = if _val>0 {"true sys"} else {"false sys"};  
+let _strin: &str  = if _val>0 {"true sys"} else {"false sys"};   //not goodway
 println!("The value of _strin is: {}", _strin);
+
     //-----------------------------------------------------------------------
 
 
@@ -42,6 +43,13 @@ println!("The value of _strin is: {}", _strin);
     else {
         println!("Odd");
     }
+
+
+let _arr:[f32;3]=[1.3,55.3,5.3];
+
+println!("the value is {:.2}",array_fun(_arr));  //:.2 is for decimal resolution
+
+
 
 }
 //---------stack allocation and deallocation memory management----------------------
@@ -73,4 +81,9 @@ pub fn even_func(x:i32)->bool{
        return true; 
     }
    
+}
+
+
+fn array_fun(_arr:[f32;3])->f32 {
+    return (_arr[0]+_arr[1]+_arr[2])/3.0;
 }

@@ -69,13 +69,33 @@ println!("guess={_guess}");
  let  ret:i32 = return_function(); 
     println!("Returned value: {}", ret);
 
-    let tup: (i32,f64,u8) =(234,4.666,7);
+    let tup: (i32,f64,u8) =(234,4.666,7);  //better method for touple 
     let(_x,_y,_z) = tup;
     println!("tuple first value={_x}");
     println!("  tuple second value={_y}");
     println!("tuple third value={_z}");
 
     println!("tuple firsr value={0}",tup.0);
+
+//---------------array------------------
+
+let _arr = [1,2,3,4,5,6];
+println!("ist element={}",_arr[1]);
+
+let arr_list=["Hello arr","Hello arr1","Hello arr2","Hello arr3","Hello arr4"]; //imitialised five array with string
+println!("ist element={}",arr_list[1]);
+println!("ist element={}",arr_list[2]);
+println!("ist element={}",arr_list[3]);
+
+let _score:[f64;3]=[2.4,54.6,3.6];
+println!("ist element={}",_score[1]);
+println!("ist element={}",_score[2]);
+println!("ist element={}",_score[3]);
+
+
+
+
+
 }
 
    
